@@ -16,8 +16,6 @@
 
 # header "$@"
 
-#!/bin/bash
-
 function header(){
   local header1="Container"
   local header2="Images "
