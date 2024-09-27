@@ -43,11 +43,37 @@ function alias_docker_commands() {
 function alias_ssh_commands() {
   alias ssh-pallawi="ssh ce00132421@10.10.21.207"
   alias ssh-kaushal="ssh cn003445@10.10.21.126"
-  alias ssh-susheel="ssh ce00142422@10.10.22.12"
+  alias ssh-susheel="ssh ce00142422@10.10.22.12",
+  alias ssh-anand="ssh ce00132221@10.10.21.193"
 }
 
 function alias_search_cmds() {
   alias search-cmds="alias | grep \$1"
+}
+
+function general_utility(){
+  alias l="ls -lrt";
+  alias ll="ls -lrt";
+  alias la="ls -la";
+  alias lla="ls -la";
+  alias c="clear";
+  alias h="history";
+  alias j="jobs";
+  alias p="ps -ef";
+  alias t="top";
+  alias d="df -h";
+  alias du="du -h";
+  alias m="free -m";
+  alias n="netstat -tulnp";
+  alias v="vim";
+  alias e="exit";
+  alias s="source ~/.bashrc";
+  alias g="git";
+  alias gcm="git commit -m";
+  alias gco="git checkout";
+  alias gcb="git checkout -b";
+  alias gpl="git pull";
+  alias gps="git push";
 }
 
 function alias_conda_commands() {
@@ -62,6 +88,7 @@ function alias_conda_commands() {
 # Main function to call all alias functions
 function __alias.main__() {
   local LSCRIPTS=$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )
+  general_utility
   alias_kill_gnome
   alias_practice
   alias_build_vyzor
